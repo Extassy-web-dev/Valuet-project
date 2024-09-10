@@ -125,7 +125,7 @@ function Overview() {
                      <button className="btn-add w-[135px] h-[35px] rounded-[25px] text-[#fff]">Add Widget</button>
                   </div>
                </div>
-               <div className="py-[50px] flex justify-between max-xl:flex max-xl:flex-col max-xl:items-center gap-[20px]">
+               <div className="py-[50px] flex justify-between max-xl:flex max-xl:flex-col max-xl:items gap-[20px]">
                   <div className='flex items-center gap-[50px] max-w-full'>
                      <div className="card h-full max-xl:h-full rounded-md p-[20px] max-w-full">
                         <h1 className="text-[17px] font-[700] text-left">Balance</h1>

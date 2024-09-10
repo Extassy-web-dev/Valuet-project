@@ -73,7 +73,7 @@ function Layout() {
                     <div className="line max-w-full w-full bg-[#018FFF] h-[2px]"></div>
                     <div className="flex items-center gap-[20px] px-[10px]">
                         <img src="../../Ellipse.png" className="cursor-pointer transition-all hover:scale-[1.1]" alt="" />
-                        <h1 className="text-[#616A8B] text-[14px] truncate font-[600] max-xl:truncate">{user[0]?.name}</h1>
+                        <h1 className="text-[#616A8B] text-[14px] font-[600] max-xl:truncate">{user[0]?.name}</h1>
                     </div>
                     <div className="flex items-center gap-[20px] px-[10px]">
                         <img src="../../log-out.png" className="cursor-pointer transition-all hover:scale-[1.1]" alt="" />

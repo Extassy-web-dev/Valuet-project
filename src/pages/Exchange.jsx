@@ -9,7 +9,7 @@ function Exchange() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
-    
+
         try {
           const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,dash&vs_currencies=usd');
           const data = await response.json();

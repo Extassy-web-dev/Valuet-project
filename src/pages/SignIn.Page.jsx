@@ -43,16 +43,16 @@ function SignIn() {
                 <div className="modal relative w-[530px] h-[655px] rounded-[10px] max-w-full max-lg:w-[450px] max-lg:h-[500px] opacity-[0.9]">
                     <form className="flex flex-col gap-[50px] items-center justify-center" onSubmit={handleSubmit(signIn)}>
                         <span className="text-[#fff] text-center pt-[50px] text-[32px] font-[500]">Welcome!</span>
-                        <div className="flex w-[380px] h-[58px] bg-[#2E3558] max-lg:w-[290px] max-lg:h-[40px] p-[15px] gap-[10px] rounded-[10px] items-center" style={{ boxShadow: "0px 4px 20px 0px rgba(1, 143, 255, 0.15)" }}>
+                        <div className={errors.mail ? "flex w-[380px] border-[red] border-[2px] h-[58px] bg-[#2E3558] max-lg:w-[290px] max-lg:h-[40px] p-[15px] gap-[10px] rounded-[10px] items-center" :"flex w-[380px] h-[58px] bg-[#2E3558] max-lg:w-[290px] max-lg:h-[40px] p-[15px] gap-[10px] rounded-[10px] items-center"} style={{ boxShadow: "0px 4px 20px 0px rgba(1, 143, 255, 0.15)" }}>
                             <img src={"../../hm.svg"} alt="" />
-                            <input className="outline-none border-none w-full text-white" style={{ background: "none" }} placeholder="E-mail" type="text" {...register('mail', {
+                            <input className={errors.mail ? "outline-none border-none w-full text-[red]" : "outline-none border-none w-full text-white"} style={{ background: "none" }} placeholder="E-mail" type="text" {...register('mail', {
                                 pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/,
                                 required: true
                             })} />
                         </div>
-                        <div className="flex w-[380px] h-[58px] bg-[#2E3558] max-lg:w-[290px] max-lg:h-[40px] p-[15px] gap-[10px] rounded-[10px] items-center" style={{ boxShadow: "0px 4px 20px 0px rgba(1, 143, 255, 0.15)" }}>
+                        <div className={errors.password ? "flex w-[380px] border-[red] border-[2px] h-[58px] bg-[#2E3558] max-lg:w-[290px] max-lg:h-[40px] p-[15px] gap-[10px] rounded-[10px] items-center" :"flex w-[380px] h-[58px] bg-[#2E3558] max-lg:w-[290px] max-lg:h-[40px] p-[15px] gap-[10px] rounded-[10px] items-center"} style={{ boxShadow: "0px 4px 20px 0px rgba(1, 143, 255, 0.15)" }}>
                             <img src={"../../block.svg"} alt="" />
-                            <input className="outline-none border-none w-full text-white" style={{ background: "none" }} type={isActive ? "text" : "password"} {...register("password", {
+                            <input className={errors.password ? "outline-none border-none w-full text-[red]" : "outline-none border-none w-full text-white"} style={{ background: "none" }} type={isActive ? "text" : "password"} {...register("password", {
                                 pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
                                 required: true
                             })} />
@@ -60,7 +60,7 @@ function SignIn() {
                         </div>
 
                         <div className="btns flex items-center justify-center gap-[20px] py-[25px]">
-                          <Link to={"/signup"}><button className="signUp">{loading ? 'Signing up...' : 'SIGN UP'}</button></Link>
+                          <Link to={"/signup"}><button className="signUp">SIGN UP</button></Link>
                             <button className="signIn" type="submit">{loading ? 'Signing in...' : 'SIGN IN'}</button>
                         </div>
                     </form>
