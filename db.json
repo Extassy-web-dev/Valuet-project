@@ -1,16 +1,7 @@
 {
   "users": [
-    {
-      "id": "f197",
-      "email": "gigahod.mm@gmail.com",
-      "name": "Artem",
-      "surname": "Saytakov",
-      "password": "200933Artem*",
-      "token": "1nRuT5HzOu"
-    }
+    
   ],
   "wallets": [],
-  "transactions": [
-   
-  ]
+  "transactions": []
 }
